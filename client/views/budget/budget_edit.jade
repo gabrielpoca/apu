@@ -1,0 +1,28 @@
+template(name="BudgetEdit")
+  .container
+    .row
+      .col-md-12
+        .page-header
+          h1
+            input(type="text" id="name" class="HeadingInput" placeholder="Pedro Ramos" value="{{ name }}")
+            .pull-right {{ budgetTotal }}€
+
+    .row
+      .col-xs-12
+        .form-group
+          a.btn.btn-primary(href="{{ pathFor route='budget.show' }}/download") Download
+          a.btn.btn-default(href="{{ pathFor route='budget.show' }}") Ver
+    .row
+      .col-xs-12
+        table.table.table-hover.table-striped
+          thead
+            tr
+              th Descrição
+              th Preço s/IVA
+              th Quantidade
+              th Total s/IVA
+              th
+          tbody
+            +each products
+              +Product data=this parent=..
+            +NewProduct

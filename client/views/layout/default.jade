@@ -1,0 +1,17 @@
+template(name="DefaultLayout")
+  .navbar.navbar-default
+    .container
+      .navbar-header
+        .navbar-brand
+          | Simple Budgets
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li
+            a(href="{{ pathFor 'budget.index' }}") Orçamentos
+        ul.nav.navbar-nav.navbar-right
+          +loginButtons
+        ul.nav.navbar-nav.navbar-right
+          li
+            a {{ currentUser.profile.name }}
+  article
+    +yield

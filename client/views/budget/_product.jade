@@ -1,6 +1,12 @@
 template(name="Product")
   tr
-    td {{ description }}
-    td {{ price }}
-    td {{ quantity }}
-    td {{ total }}
+    td {{ data.description }}
+    td {{ data.price }}€
+    td {{ data.quantity }}
+    td {{ data.total }}€
+    td.text-right
+      button(type="button" class="btn btn-default up")
+        span.glyphicon.glyphicon-arrow-up
+      button(type="button" class="btn btn-default down")
+        span.glyphicon.glyphicon-arrow-down
+      button(type="button" class="btn btn-danger btn-sm delete") Apagar

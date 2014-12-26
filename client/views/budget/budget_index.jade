@@ -1,14 +1,37 @@
 template(name="BudgetIndex")
   .container
     .row
-      .col-md-12
-        h1 Orçamentos
+      .col-xs-12
+        .page-header
+          h1 Orçamentos
+
     .row
-      .col-md-12
-        table.table
-          tr
-            td Nome
-          +each budgets
+      .col-xs-12
+        .form-group
+          .btn-group
+            button(type="button" id="new" class="btn btn-primary btn-lg") + Novo Orçamento
+
+    .row
+      .col-xs-12
+        table.table.table-hover.table-striped
+          thead
             tr
-              td
-                a(href="{{ pathFor route='budget.show' }}") {{name}}
+              th Nome
+              th Data
+              th
+          tbody
+            +each this
+              tr
+                td
+                  a(href="{{ pathFor route='budget.edit' }}") {{name}}
+                td {{ formatDate modifiedAt "short" }}
+                td.text-right
+                  a.btn.btn-default(href="{{ pathFor route='budget.edit' }}") Editar
+                  .btn-group
+                    a.btn.btn-default(href="{{ pathFor route='budget.show' }}/download")
+                      | Download
+                    button.btn.btn-default.dropdown-toggle(data-toggle="dropdown")
+                      span.caret
+                    ul.dropdown-menu.dropdown-menu-right.text-left
+                      li
+                        a.text-danger.delete(href="#") Apagar

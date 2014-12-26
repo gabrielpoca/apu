@@ -1,2 +1,3 @@
 Meteor.publish 'budgets', ->
-  Budgets.find()
+  if @userId
+    Budgets.find()

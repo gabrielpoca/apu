@@ -1,0 +1,10 @@
+template(name="SessionLayout")
+  .navbar.navbar-default
+    .container
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav.navbar-right
+          +loginButtons
+        ul.nav.navbar-nav.navbar-right
+          li
+            a {{ currentUser.profile.name }}
+  +yield
