@@ -1,0 +1,11 @@
+template(name="NewProduct")
+  tr
+    td
+      input(type="text" id="new_description" value="{{ description }}")
+    td
+      input(type="number" min="0" id="new_price" value="{{ price }}")
+    td
+      input(type="number" min="0" id="new_quantity" value="{{ quantity }}")
+    td {{ total }}
+    td
+      button(type="button" class="btn btn-primary" id="new_submit") Guardar

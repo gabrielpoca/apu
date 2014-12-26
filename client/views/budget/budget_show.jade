@@ -1,0 +1,23 @@
+template(name="BudgetShow")
+  .container
+    .row
+      .large-12.columns
+        h1 {{name}}
+
+  .container
+    .row
+      form
+        .form-group
+          label(for="client_name") Nome do client
+          input(type="text" class="form-control" placeholder="Pedro Ramos")
+    .row
+      table.table
+        tr
+          th Descrição
+          th Preço
+          th Quantidade
+          th Total
+          th Acções
+        +each products
+          +Product
+        +NewProduct

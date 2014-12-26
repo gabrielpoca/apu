@@ -1,0 +1,14 @@
+template(name="BudgetIndex")
+  .container
+    .row
+      .col-md-12
+        h1 Orçamentos
+    .row
+      .col-md-12
+        table.table
+          tr
+            td Nome
+          +each budgets
+            tr
+              td
+                a(href="{{ pathFor route='budget.show' }}") {{name}}
