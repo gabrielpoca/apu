@@ -3,21 +3,21 @@ template(name="BudgetIndex")
     .row
       .col-xs-12
         .page-header
-          h1 Orçamentos
+          h1 {{i18n 'budget.title' }}
 
     .row
       .col-xs-12
         .form-group
           .btn-group
-            button(type="button" id="new" class="btn btn-primary btn-lg") + Novo Orçamento
+            button(type="button" id="new" class="btn btn-primary btn-lg") + {{i18n 'budget.new' }}
 
     .row
       .col-xs-12
         table.table.table-hover.table-striped
           thead
             tr
-              th Nome
-              th Data
+              th {{i18n 'budget.name' }}
+              th {{i18n 'budget.date' }}
               th
           tbody
             +each this
@@ -26,12 +26,13 @@ template(name="BudgetIndex")
                   a(href="{{ pathFor route='budget.edit' }}") {{name}}
                 td {{ formatDate modifiedAt "short" }}
                 td.text-right
-                  a.btn.btn-default(href="{{ pathFor route='budget.edit' }}") Editar
+                  a.btn.btn-default(href="{{ pathFor route='budget.edit' }}")
+                    {{i18n 'budget.edit'}}
                   .btn-group
                     a.btn.btn-default(href="{{ pathFor route='budget.show' }}/download")
-                      | Download
+                      {{i18n 'budget.download' }}
                     button.btn.btn-default.dropdown-toggle(data-toggle="dropdown")
                       span.caret
                     ul.dropdown-menu.dropdown-menu-right.text-left
                       li
-                        a.text-danger.delete(href="#") Apagar
+                        a.text-danger.delete(href="#") {{i18n 'budget.delete' }}

@@ -21,3 +21,4 @@ accounts-google
 ian:accounts-ui-bootstrap-3
 meteorhacks:ssr
 meteorhacks:fast-render
+anti:i18n

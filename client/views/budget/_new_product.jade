@@ -8,4 +8,5 @@ template(name="NewProduct")
       input(type="number" min="0" id="new_quantity" value="{{ quantity }}")
     td {{ total }}€
     td.text-right
-      button(type="button" class="btn btn-primary" id="new_submit") Inserir
+      button(type="button" class="btn btn-primary" id="new_submit")
+        {{i18n "product.insert" }}

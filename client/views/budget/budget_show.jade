@@ -5,10 +5,10 @@ template(name="BudgetShow")
         table.table
           thead
             tr
-              th Descrição
-              th Preço
-              th Quantidade
-              th Total
+              th {{i18n 'product.description' }}
+              th {{i18n 'product.price_without_tax' }}
+              th {{i18n 'product.quantity' }}
+              th {{i18n 'product.total_without_tax' }}
           tbody
             +each products
               tr
