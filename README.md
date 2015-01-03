@@ -10,9 +10,31 @@ Since this is not for selling, I implemented only the required features.
 
 ## Quick start
 
+### Install dependencies
+
 wkhtmltopdf is the only dependency besides the meteor stack. To learn how to install please visit [here](http://wkhtmltopdf.org/).
 
-Now run `meteor` and everything should be up and running.
+
+### Envoirment Variables
+
+You need to create a file in `.dev/settings.json` with the following structure
+
+```json
+{
+  "allowed_emails": [
+    "email1@gmail.com",
+    "email2@gmail.com"
+  ]
+}
+```
+
+In this file you need to define the emails that are allowed to log in to your application.
+
+A similar file needs to be created in `.deploy/settings.json` for production settings.
+
+### Start up
+
+You're now ready, just run `meteor`.
 
 ## Deploy
 
