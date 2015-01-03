@@ -34,26 +34,27 @@ A similar file needs to be created in `.deploy/settings.json` for production set
 
 ### Start up
 
-You're now ready, just run `meteor`.
+You're now ready, run `bin/server` and a meteor server should be available to you in [http://localhost:3000](http://localhost:3000).
 
 ## Deploy
 
-There is a default meteor up configuration. To deploy first navigate to the `.deploy` folder
+There is a meteor up configuration file.
+
+The first time you're deploying you need to setup the server.
+Go to the `.deploy` folder
 
 ```
 cd .deploy
 ```
 
-Now, for the first time, run the setup
+And run
 
 ```
 mup setup
 ```
 
-Finally, run the deploy command
+The setup is done. Now every time you need to deploy just run
 
 ```
-mup deploy
+bin/deploy
 ```
-
-The setup step is not necessary in future deploys.
