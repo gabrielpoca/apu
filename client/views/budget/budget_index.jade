@@ -27,10 +27,10 @@ template(name="BudgetIndex")
                 td {{ formatDate modifiedAt "short" }}
                 td.text-right
                   a.btn.btn-default(href="{{ pathFor route='budget.edit' }}")
-                    {{i18n 'budget.edit'}}
+                    | {{i18n 'budget.edit'}}
                   .btn-group
                     a.btn.btn-default(href="{{ pathFor route='budget.show' }}/download")
-                      {{i18n 'budget.download' }}
+                      | {{i18n 'budget.download' }}
                     button.btn.btn-default.dropdown-toggle(data-toggle="dropdown")
                       span.caret
                     ul.dropdown-menu.dropdown-menu-right.text-left

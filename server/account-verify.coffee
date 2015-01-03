@@ -6,4 +6,4 @@ canAccess = (user) ->
   verifyEmail(user.services['google'].email)
  
 verifyEmail = (email) ->
-  email == 'cette118@gmail.com' || email == 'domingos@hortogirassol.pt'
+  _.contains(Meteor.settings.allowed_emails, email)
