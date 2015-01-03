@@ -1,0 +1,4 @@
+#/bin/sh
+
+cd .deploy
+mup deploy
