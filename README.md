@@ -1,4 +1,6 @@
-This is a small application I made to help my relatives plan budgets for their clients.
+# APU
+
+Apu is a small application I made to help my relatives plan budgets for their clients.
 
 The key features are:
 
