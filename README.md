@@ -6,7 +6,7 @@ The key features are:
 * Reorder the products in a budget.
 * Download the budget to print or send my email.
 
-Giving this is not for selling, I implemented only the required features.
+Since this is not for selling, I implemented only the required features.
 
 ## Quick start
 
